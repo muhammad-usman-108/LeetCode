@@ -30,6 +30,7 @@ class Solution {
         for(int i=0; i<m; i++) {
             row[i] = minimum(matrix[i]);
         }
+        
         for(int c=0; c<n; c++) {
              int[] temp = new int[m];
             for (int r=0;r<m; r++) {
@@ -38,13 +39,6 @@ class Solution {
             col[c] = maximum(temp);
         }
         
-        for(int i=0; i<m; i++) {
-            System.out.println(row[i]);
-        }
-        System.out.println("--------------------");
-        for(int i=0; i<n; i++) {
-            System.out.println(col[i]);
-        }
         List<Integer> res = new ArrayList<Integer>();
         for(int i=0; i<m; i++) {
             for(int j=0; j<n; j++) {
