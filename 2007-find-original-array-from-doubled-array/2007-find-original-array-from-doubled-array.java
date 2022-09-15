@@ -14,8 +14,9 @@ class Solution {
                 temp.put(changed[i], 1);
             }
         }
-        System.out.println(temp);
+        
         Arrays.sort(changed);
+        
         int index = 0;
         for (int i=0; i<changed.length; i++) {
             if(temp.containsKey(changed[i]*2)) {
@@ -23,7 +24,6 @@ class Solution {
                     if (temp.get(changed[i]) > 1) {
                         temp.put(changed[i], temp.get(changed[i]) - 2);
                         original[index] = changed[i];
-                        System.out.println(index);
                         index++;
                     }
                 } else {
@@ -31,7 +31,6 @@ class Solution {
                         temp.put(changed[i]*2, temp.get(changed[i]*2) - 1);
                         temp.put(changed[i], temp.get(changed[i]) - 1);
                         original[index] = changed[i];
-                        System.out.println(index);
                         index++;
                     }
                 }
