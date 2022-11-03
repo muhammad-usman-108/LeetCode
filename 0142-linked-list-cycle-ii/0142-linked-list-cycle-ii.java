@@ -22,8 +22,6 @@ public class Solution {
             head = head.next;
             pos++;
         }
-        
-        
         return null;
     }
 }
