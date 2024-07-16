@@ -14,7 +14,6 @@ class Solution:
                 start_add = start
             elif index == b:
                 end_add = start
-                break
             start = start.next
             index = index + 1
         start_add.next = list2
